@@ -1,0 +1,7 @@
+<h1>Каталог продукции</h1>
+<div class="table-wrapper">
+  <%= datagrid_form_for @grid, :method => :get, :url => products_path %>
+  
+  <%= datagrid_table @grid %>
+  <%= paginate(@grid.assets) %>
+</div>
