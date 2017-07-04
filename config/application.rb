@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 ENV['RAILS_ADMIN_THEME'] = 'rollincode'
+APP_CONFIG = YAML.load_file("#{Rails.root}/config/application.yml")[Rails.env].to_hash
 
 module Domchemic
   class Application < Rails::Application
