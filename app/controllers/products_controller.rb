@@ -8,11 +8,13 @@ class ProductsController < ApplicationController
   def upload
     if uploaded_io = params[:file]
       @filename = DateTime.now.to_s + '.xls'
-      File.open(Rails.root.join('public', 'uploads', 'products', @filename), 'w') do |file|
+      path_to_file = Rails.root.join('public', 'uploads', 'products', @filename)
+      File.open(path_to_file, 'w') do |file|
         file.write(uploaded_io.read.force_encoding("utf-8"))
       end
 
-      xls = Roo::Excel.new(Rails.root.join('public', 'uploads', 'products', @filename))
+      xls = Roo::Excel.new(path_to_file)
+      File.delete(path_to_file) if File.exist?(path_to_file)
       csv_text = xls.to_csv
       csv = CSV.parse(csv_text)#, :headers => true)
 
@@ -26,6 +28,8 @@ class ProductsController < ApplicationController
           logger.warn product.errors.full_messages
         end
       end
+
+      #REMOVE FILE
 
       old_products.each do |product|
         product.destroy
