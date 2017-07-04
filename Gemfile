@@ -26,6 +26,7 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'roo-xls'
 gem 'datagrid', '1.5.4'
 
+gem 'unicorn', '5.1.0'
 gem "capistrano", '3.6.1'
 gem 'capistrano-bundler', '1.1.4'
 gem 'capistrano-rails', '1.1.7'
