@@ -29,7 +29,7 @@ set :pty, true
 set :log_level, :info
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/application.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w(log tmp/cache tmp/pids vendor/bundle public/system)
@@ -38,7 +38,7 @@ set :linked_dirs, %w(log tmp/cache tmp/pids vendor/bundle public/system)
 # set :keep_releases, 5
 
 # Configure RVM
-set :rvm_ruby_version, '2.3'
+set :rvm_ruby_version, '2.3.0'
 
 # You unlikely have to change below this line
 # -----------------------------------------------------------------------------
