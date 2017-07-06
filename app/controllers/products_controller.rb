@@ -19,17 +19,16 @@ class ProductsController < ApplicationController
 
       File.delete(path_to_file) if File.exist?(path_to_file)
       old_products = Product.all.to_a
-
-      csv[7..-1].each_with_index do |row, index|
-        logger.warn row[0]
-        name = row[0][/\s.+(\/|\()/]
-        if name
-          product = Product.create(name: name[1..-2], price: row[2].to_f)
-          logger.warn product.errors.full_messages
+      (csv.count / 1000).times do |i|
+        csv[7..-1].each_with_index do |row, index|
+          logger.warn row[0]
+          name = row[0][/\s.+(\/|\()/]
+          if name
+            product = Product.create(name: name[1..-2], price: row[2].to_f)
+            logger.warn product.errors.full_messages
+          end
         end
       end
-
-      #REMOVE FILE
 
       old_products.each do |product|
         product.destroy
