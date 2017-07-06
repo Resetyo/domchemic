@@ -20,8 +20,7 @@ class ProductsController < ApplicationController
       File.delete(path_to_file) if File.exist?(path_to_file)
       old_products = Product.all.pluck(:id)
 
-      parts = 2
-      # parts = (csv.count / 1000).to_i + 1
+      parts = (csv.count / 1000).to_i + 1
       (1..parts).each do |i|
         logger.info "=============================#{i}"
         Kaminari.paginate_array(csv).page(i).per(1000).each_with_index do |row, index|
