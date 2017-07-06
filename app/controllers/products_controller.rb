@@ -14,10 +14,10 @@ class ProductsController < ApplicationController
       end
 
       xls = Roo::Excel.new(path_to_file)
-      File.delete(path_to_file) if File.exist?(path_to_file)
       csv_text = xls.to_csv
       csv = CSV.parse(csv_text)#, :headers => true)
 
+      File.delete(path_to_file) if File.exist?(path_to_file)
       old_products = Product.all.to_a
 
       csv[7..-1].each_with_index do |row, index|
