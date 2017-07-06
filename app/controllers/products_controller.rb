@@ -15,12 +15,15 @@ class ProductsController < ApplicationController
 
       xls = Roo::Excel.new(path_to_file)
       csv_text = xls.to_csv
-      csv = CSV.parse(csv_text)#, :headers => true)
+      csv = CSV.parse(csv_text)[7..-1]#, :headers => true)
 
       File.delete(path_to_file) if File.exist?(path_to_file)
       old_products = Product.all.to_a
-      (csv.count / 1000).times do |i|
-        csv[7..-1].each_with_index do |row, index|
+
+      parts = 2
+      # parts = (csv.count / 1000).to_i
+      (0..parts).each do |i|
+        csv[(1000*i)..(1000*(i+1))].each_with_index do |row, index|
           logger.warn row[0]
           name = row[0][/\s.+(\/|\()/]
           if name
