@@ -23,8 +23,8 @@ class ProductsController < ApplicationController
       parts = 2
       # parts = (csv.count / 1000).to_i
       (0..parts).each do |i|
+        logger.info "=============================#{i}"
         csv[(1000*i)..(1000*(i+1))].each_with_index do |row, index|
-          logger.warn row[0]
           name = row[0][/\s.+(\/|\()/]
           if name
             product = Product.create(name: name[1..-2], price: row[2].to_f)
