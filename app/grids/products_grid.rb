@@ -5,7 +5,7 @@ class ProductsGrid
   scope do
     Product
   end
-  filter(:name, :string, header: 'Поиск по наименованию') { |value| where("name ilike '%#{value}%'") }
+  filter(:name, :string, header: 'Поиск по наименованию') { |value| where("LOWER(name) LIKE ?", "%#{value.mb_chars.downcase.to_s}%") }
 
   column(:name, header: 'Наименование')
   column(:price, header: 'Цена') do
