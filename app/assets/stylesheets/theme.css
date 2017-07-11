@@ -7715,7 +7715,6 @@ form .help-block {
   margin-bottom: 15px;
 }
 .section_portfolio {
-  padding-top: 0;
   padding-bottom: 0;
   border-top: 0 !important;
 }
@@ -8046,7 +8045,7 @@ form .help-block {
   right: 0;
   bottom: 50%;
   left: 0;
-  background: url(/assets1/img/1.jpg) no-repeat center center / cover;
+  background: url(/assets1/img/chem.jpg) no-repeat center center / cover;
   z-index: -1;
 }
 .section_contact .page-header {

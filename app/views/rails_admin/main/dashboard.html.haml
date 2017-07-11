@@ -29,11 +29,11 @@
             %td.links
               %ul.inline.list-inline= menu_for :collection, abstract_model, nil, true
 = form_tag("/upload", :multipart => true) do 
-  = label_tag 'Обновить прайс'
+  = label_tag 'Выбрать прайс'
   = file_field_tag :file
-  = submit_tag
+  = submit_tag "Залить файл на сервер"
 - if @auditing_adapter && authorized?(:history_index)
   #block-tables.block
     .content
       %h2= t("admin.actions.history_index.menu")
-= render partial: 'rails_admin/main/dashboard_history'
+      = render partial: 'rails_admin/main/dashboard_history'

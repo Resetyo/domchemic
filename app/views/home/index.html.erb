@@ -1,1012 +1,979 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets1/ico/favicon.ico">
+<!-- PRELOADER
+================================================== -->
+<div class="preloader">
+  <img src="assets1/img/spinner.svg" alt="Loading..." class="preloader__spinner">
+</div>
 
-    <title>Wolfram: Default</title>
-
-    <!-- CSS Plugins -->
-    <link rel="stylesheet" href="assets1/plugins/ionicons/css/ionicons.min.css">
-
-  </head>
-  <body data-spy="scroll" data-target="#navbar_main" data-offset="80">
-
-    <!-- PRELOADER
-    ================================================== -->
-    <div class="preloader">
-      <img src="assets1/img/spinner.svg" alt="Loading..." class="preloader__spinner">
-    </div>
-
-    <!-- MODAL
-    ================================================== -->
-    <div class="modal fade" id="modal_portfolio" tabindex="-1" role="dialog" aria-labelledby="modal_portfolio__heading">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title" id="modal_portfolio__heading"></h4>
-          </div>
-          <div class="modal-body">
-            <img id="modal_portfolio__img" class="img-responsive" src="assets1/img/1.jpg" alt="...">
-            <p id="modal_portfolio__content"></p>
-          </div>
-        </div>
+<!-- MODAL
+================================================== -->
+<div class="modal fade" id="modal_portfolio" tabindex="-1" role="dialog" aria-labelledby="modal_portfolio__heading">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="modal_portfolio__heading"></h4>
+      </div>
+      <div class="modal-body">
+        <img id="modal_portfolio__img" class="img-responsive" src="assets1/img/1.jpg" alt="...">
+        <p id="modal_portfolio__content"></p>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- NAVBAR
-    ================================================== -->
-    <nav class="navbar navbar-fixed-top navbar-default">
-      <div class="container">
-    
-        <!-- Brand name -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_main" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="layouts.html">Домхимик</a>
-        </div>
-    
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbar_main">
-          
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="#section_banner">Начало</a>
-            </li>
-            <li><a href="#section_features">Features</a></li>
-            <li><a href="#section_portfolio">Portfolio</a></li>
-            <li><a href="#section_pricing">Pricing</a></li>
-            <li><a href="#section_team">Team</a></li>
-            <li><a href="#section_stats">Stats</a></li>
-            <li><a href="#section_skills">Skills</a></li>
-            <li><a href="#section_about">About</a></li>
-            <li><a href="#section_testimonials">Testimonials</a></li>
-            <li><a href="#section_news">News</a></li>
-            <li><a href="#section_contact">Contact</a></li>
-          </ul>
-    
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
+<!-- NAVBAR
+================================================== -->
+<nav class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
 
-    <!-- BANNER
-    ================================================== -->
-    <section class="section_banner" id="section_banner">
+    <!-- Brand name -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_main" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="layouts.html">Троговый Дом Химик</a>
+    </div>
 
-      <!-- Images -->
-      <div class="banner__carousel__img" 
-           data-images="assets1/img/1.jpg, assets1/img/2.jpg, assets1/img/3.jpg">
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbar_main">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#section_banner">Начало</a></li>
+        <li><%= link_to "Цены", products_path %></li>
+        <li><a href="#section_portfolio">Интересное</a></li>
+        <li><a href="#section_features">О нас</a></li>
+        <li><a href="#section_team">Команда</a></li>
+        <li><a href="#section_pricing">Скидки</a></li>
+        <li><a href="#section_news">Доставка</a></li>
+        <!-- <li><a href="#section_stats">Stats</a></li> -->
+        <!-- <li><a href="#section_skills">Skills</a></li> -->
+        <!-- <li><a href="#section_about">About</a></li> -->
+        <li><a href="#section_testimonials">Отзывы</a></li>
+        <li><a href="#section_contact">Контакты</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+
+<!-- BANNER
+================================================== -->
+<section class="section_banner" id="section_banner">
+
+  <!-- Images -->
+  <div class="banner__carousel__img" 
+       data-images="assets1/img/chem.jpg">
+  </div>
+
+  <!-- Carousel -->
+  <div id="banner__carousel" class="banner__carousel carousel" data-ride="carousel">
+
+    <!-- Slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+        
+              <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
+                Узнайте о нас <span>больше</span>
+              </h1>
+              <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
+                Или сразу ознакомьтесь со списком товаров
+              </p>
+              <div class="text-center">
+                <%= link_to "Прайс на продукцию", products_path, class: "btn btn-primary animate-down animate-xs-step-2" %>
+              </div>
+        
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+
+      </div>
+    </div>
+  </div> <!-- / .carousel -->
+</section>
+
+<!-- PORTFOLIO
+================================================== -->
+<section class="section_portfolio" id="section_portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center">
+          Подборка <span>интересных</span> товаров
+        </h2>
+
+        <p class="page-subheader text-center">
+          То, на что стоит обратить особое внимание
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4">
+        
+        <div class="portfolio__item">
+          <div class="portfolio__item__img">
+            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
+            <div class="portfolio__item__img__mask">
+              <h3 class="text-center">
+                Надувной матрас-подушка для отдыха
+              </h3>
+              <div class="text-center">
+                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
+                  Подробнее
+                </a>
+              </div>
+            </div> <!-- / .portfolio__item__img__mask -->
+          </div> <!-- / .portfolio__item__img -->
+        </div> <!-- / .portfolio__item -->
+
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        
+        <div class="portfolio__item">
+          <div class="portfolio__item__img">
+            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
+            <div class="portfolio__item__img__mask">
+              <h3 class="text-center">
+                Надувной матрас-подушка для отдыха
+              </h3>
+              <div class="text-center">
+                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
+                  Подробнее
+                </a>
+              </div>
+            </div> <!-- / .portfolio__item__img__mask -->
+          </div> <!-- / .portfolio__item__img -->
+        </div> <!-- / .portfolio__item -->
+
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        
+        <div class="portfolio__item">
+          <div class="portfolio__item__img">
+            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
+            <div class="portfolio__item__img__mask">
+              <h3 class="text-center">
+                Надувной матрас-подушка для отдыха
+              </h3>
+              <div class="text-center">
+                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
+                  Подробнее
+                </a>
+              </div>
+            </div> <!-- / .portfolio__item__img__mask -->
+          </div> <!-- / .portfolio__item__img -->
+        </div> <!-- / .portfolio__item -->
+
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        
+        <div class="portfolio__item">
+          <div class="portfolio__item__img">
+            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
+            <div class="portfolio__item__img__mask">
+              <h3 class="text-center">
+                Надувной матрас-подушка для отдыха
+              </h3>
+              <div class="text-center">
+                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
+                  Подробнее
+                </a>
+              </div>
+            </div> <!-- / .portfolio__item__img__mask -->
+          </div> <!-- / .portfolio__item__img -->
+        </div> <!-- / .portfolio__item -->
+
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        
+        <div class="portfolio__item">
+          <div class="portfolio__item__img">
+            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
+            <div class="portfolio__item__img__mask">
+              <h3 class="text-center">
+                Надувной матрас-подушка для отдыха
+              </h3>
+              <div class="text-center">
+                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
+                  Подробнее
+                </a>
+              </div>
+            </div> <!-- / .portfolio__item__img__mask -->
+          </div> <!-- / .portfolio__item__img -->
+        </div> <!-- / .portfolio__item -->
+
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        
+        <div class="portfolio__item">
+          <div class="portfolio__item__img">
+            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
+            <div class="portfolio__item__img__mask">
+              <h3 class="text-center">
+                Надувной матрас-подушка для отдыха
+              </h3>
+              <div class="text-center">
+                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
+                  Подробнее
+                </a>
+              </div>
+            </div> <!-- / .portfolio__item__img__mask -->
+          </div> <!-- / .portfolio__item__img -->
+        </div> <!-- / .portfolio__item -->
+
       </div>
 
-      <!-- Carousel -->
-      <div id="banner__carousel" class="banner__carousel carousel" data-ride="carousel">
+    </div> <!-- / .row -->
+  </div> <!-- / .container-fluid -->
+</section>
 
-        <!-- Slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
+<!-- FEATURES
+================================================== -->
+<section class="section_features" id="section_features">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
 
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12">
-            
-                  <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
-                    Узнайте о нас <span>больше</span>
-                  </h1>
-                  <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
-                    Или сразу ознакомьтесь со списком товаров
-                  </p>
-                  <div class="text-center">
-                    <%= link_to "Прайс на продукцию", products_path, class: "btn btn-primary animate-down animate-xs-step-2" %>
-                    </a>
-                  </div>
-            
-                </div>
-              </div> <!-- / .row -->
-            </div> <!-- / .container -->
+        <h2 class="page-header text-center">
+          Что такого <span>особенного</span> в нашей компании?
+        </h2>
 
+        <p class="page-subheader text-center">
+          Торговый Дом Химик начал свою деятельность в 1996 году, специализируясь на оптовой торговле товарами народного потребления.
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-4">
+        
+        <div class="features__item animate-sm-step-0" data-animate="animate-up">
+          <div class="features__item__icon">
+            <i class="ion-android-laptop"></i>
+          </div>
+          <h3 class="features__item__heading">
+            Опыт
+          </h3>
+          <div class="features__item__body">
+            Многолетний коммерческий опыт, грамотно выстроенный маркетинг, наработанные годами связи – всё это позволило нам стать одним из лидеров в регионе по оптовым продажам товаров хозяйственно-бытового назначения.
           </div>
         </div>
-      </div> <!-- / .carousel -->
-    </section>
 
-    <!-- FEATURES
-    ================================================== -->
-    <section class="section_features" id="section_features">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center">
-              What's so <span>awesome</span> about it?
-            </h2>
-
-            <p class="page-subheader text-center">
-              Wolfram is a creative one-page template set professionally handcrafted to meet the needs of novice developers and experts alike. You don't need to have any special knowledge to set it up and adjust for your needs.
-            </p>
-    
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="features__item animate-sm-step-2" data-animate="animate-up">
+          <div class="features__item__icon">
+            <i class="ion-android-color-palette"></i>
           </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-4">
-            
-            <div class="features__item animate-sm-step-0" data-animate="animate-up">
-              <div class="features__item__icon">
-                <i class="ion-android-laptop"></i>
-              </div>
-              <h3 class="features__item__heading">
-                Fully responsive
-              </h3>
-              <div class="features__item__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis temporibus dolor tempore blanditiis nulla amet atque repellendus fuga maxime.
-              </div>
-            </div>
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="features__item animate-sm-step-1" data-animate="animate-up">
-              <div class="features__item__icon">
-                <i class="ion-android-options"></i>
-              </div>
-              <h3 class="features__item__heading">
-                Multiple layout options
-              </h3>
-              <div class="features__item__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis temporibus dolor tempore blanditiis nulla amet atque repellendus fuga maxime.
-              </div>
-            </div>
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="features__item animate-sm-step-2" data-animate="animate-up">
-              <div class="features__item__icon">
-                <i class="ion-android-color-palette"></i>
-              </div>
-              <h3 class="features__item__heading">
-                Multiple color schemes
-              </h3>
-              <div class="features__item__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis temporibus dolor tempore blanditiis nulla amet atque repellendus fuga maxime.
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-4">
-            
-            <div class="features__item animate-sm-step-0" data-animate="animate-up">
-              <div class="features__item__icon">
-                <i class="ion-android-checkmark-circle"></i>
-              </div>
-              <h3 class="features__item__heading">
-                Built with LESS
-              </h3>
-              <div class="features__item__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis temporibus dolor tempore blanditiis nulla amet atque repellendus fuga maxime.
-              </div>
-            </div>
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="features__item animate-sm-step-1" data-animate="animate-up">
-              <div class="features__item__icon">
-                <i class="ion-android-send"></i>
-              </div>
-              <h3 class="features__item__heading">
-                Functional contact form
-              </h3>
-              <div class="features__item__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis temporibus dolor tempore blanditiis nulla amet atque repellendus fuga maxime.
-              </div>
-            </div>
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="features__item animate-sm-step-2" data-animate="animate-up">
-              <div class="features__item__icon">
-                <i class="ion-android-mail"></i>
-              </div>
-              <h3 class="features__item__heading">
-                Free support by email
-              </h3>
-              <div class="features__item__body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis temporibus dolor tempore blanditiis nulla amet atque repellendus fuga maxime.
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- PORTFOLIO
-    ================================================== -->
-    <section class="section_portfolio" id="section_portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center sr-only">
-              A picture paints a <span>thousand</span> words
-            </h2>
-    
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6 col-lg-4">
-            
-            <div class="portfolio__item">
-              <div class="portfolio__item__img">
-                <img src="assets1/img/1.jpg" class="img-responsive" alt="...">
-                <div class="portfolio__item__img__mask">
-                  <h3 class="text-center">
-                    Lorem ipsum dolor site amet
-                  </h3>
-                  <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Lorem ipsum dolor site amet" data-img="assets1/img/1.jpg" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Open preview
-                    </a>
-                  </div>
-                </div> <!-- / .portfolio__item__img__mask -->
-              </div> <!-- / .portfolio__item__img -->
-            </div> <!-- / .portfolio__item -->
-
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            
-            <div class="portfolio__item">
-              <div class="portfolio__item__img">
-                <img src="assets1/img/2.jpg" class="img-responsive" alt="...">
-                <div class="portfolio__item__img__mask">
-                  <h3 class="text-center">
-                    Lorem ipsum dolor site amet
-                  </h3>
-                  <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Lorem ipsum dolor site amet" data-img="assets1/img/2.jpg" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Open preview
-                    </a>
-                  </div>
-                </div> <!-- / .portfolio__item__img__mask -->
-              </div> <!-- / .portfolio__item__img -->
-            </div> <!-- / .portfolio__item -->
-
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            
-            <div class="portfolio__item">
-              <div class="portfolio__item__img">
-                <img src="assets1/img/3.jpg" class="img-responsive" alt="...">
-                <div class="portfolio__item__img__mask">
-                  <h3 class="text-center">
-                    Lorem ipsum dolor site amet
-                  </h3>
-                  <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Lorem ipsum dolor site amet" data-img="assets1/img/3.jpg" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Open preview
-                    </a>
-                  </div>
-                </div> <!-- / .portfolio__item__img__mask -->
-              </div> <!-- / .portfolio__item__img -->
-            </div> <!-- / .portfolio__item -->
-
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            
-            <div class="portfolio__item">
-              <div class="portfolio__item__img">
-                <img src="assets1/img/4.jpg" class="img-responsive" alt="...">
-                <div class="portfolio__item__img__mask">
-                  <h3 class="text-center">
-                    Lorem ipsum dolor site amet
-                  </h3>
-                  <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Lorem ipsum dolor site amet" data-img="assets1/img/4.jpg" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Open preview
-                    </a>
-                  </div>
-                </div> <!-- / .portfolio__item__img__mask -->
-              </div> <!-- / .portfolio__item__img -->
-            </div> <!-- / .portfolio__item -->
-
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            
-            <div class="portfolio__item">
-              <div class="portfolio__item__img">
-                <img src="assets1/img/5.jpg" class="img-responsive" alt="...">
-                <div class="portfolio__item__img__mask">
-                  <h3 class="text-center">
-                    Lorem ipsum dolor site amet
-                  </h3>
-                  <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Lorem ipsum dolor site amet" data-img="assets1/img/5.jpg" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Open preview
-                    </a>
-                  </div>
-                </div> <!-- / .portfolio__item__img__mask -->
-              </div> <!-- / .portfolio__item__img -->
-            </div> <!-- / .portfolio__item -->
-
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            
-            <div class="portfolio__item">
-              <div class="portfolio__item__img">
-                <img src="assets1/img/7.jpg" class="img-responsive" alt="...">
-                <div class="portfolio__item__img__mask">
-                  <h3 class="text-center">
-                    Lorem ipsum dolor site amet
-                  </h3>
-                  <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Lorem ipsum dolor site amet" data-img="assets1/img/7.jpg" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Open preview
-                    </a>
-                  </div>
-                </div> <!-- / .portfolio__item__img__mask -->
-              </div> <!-- / .portfolio__item__img -->
-            </div> <!-- / .portfolio__item -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container-fluid -->
-    </section>
-
-    <!-- PRICING
-    ================================================== -->
-    <section class="section_pricing" id="section_pricing">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center">
-              That's about <span>6 cups</span> of coffee
-            </h2>
-
-            <p class="page-subheader text-center">
-              Three pricing plans to fit a project of any size. Painless refund guaranteed.
-            </p>
-    
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-4">
-            
-            <div class="pricing__item animate-sm-step-0" data-animate="animate-up">
-              <h3 class="pricing__item__heading">
-                Single application
-              </h3>
-              <div class="pricing__item__price">
-                $10<small> / lic.</small>
-              </div>
-              <ul class="pricing__item__features">
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Cum quo blanditiis cumque</li>
-                <li>Ab laboriosam odio autem voluptatibus, voluptate dolorem</li>
-              </ul>
-              <a href="#" class="btn btn-block btn-primary">
-                Purchase now
-              </a>
-            </div> <!-- / .pricing__item -->
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="pricing__item animate-sm-step-1" data-animate="animate-up">
-              <h3 class="pricing__item__heading">
-                Multiple applications
-              </h3>
-              <div class="pricing__item__price">
-                $50<small> / lic.</small>
-              </div>
-              <ul class="pricing__item__features">
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Cum quo blanditiis cumque</li>
-                <li>Ab laboriosam odio autem voluptatibus, voluptate dolorem</li>
-              </ul>
-              <a href="#" class="btn btn-block btn-primary">
-                Purchase now
-              </a>
-            </div> <!-- / .pricing__item -->
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="pricing__item animate-sm-step-2" data-animate="animate-up">
-              <h3 class="pricing__item__heading">
-                Extended license
-              </h3>
-              <div class="pricing__item__price">
-                $100<small> / lic.</small>
-              </div>
-              <ul class="pricing__item__features">
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Cum quo blanditiis cumque</li>
-                <li>Ab laboriosam odio autem voluptatibus, voluptate dolorem</li>
-              </ul>
-              <a href="#" class="btn btn-block btn-primary">
-                Purchase now
-              </a>
-            </div> <!-- / .pricing__item -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- TEAM
-    ================================================== -->
-    <section class="section_team section_alt" id="section_team">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center">
-              They've <span>made</span> this possible
-            </h2>
-
-            <p class="page-subheader text-center">
-              A team of hard-working enthusiastic people who helped this product come to life.
-            </p>
-    
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-4">
-            
-            <div class="team__item animate-sm-step-0" data-animate="animate-up">
-              <div class="team__item__img">
-                <img src="assets1/img/user_1.jpg" class="img-responsive" alt="...">
-              </div>
-              <div class="team__item__footer">
-                <h3 class="team__item__footer__heading">
-                  Judy Doe <small>/ Designer</small>
-                </h3>
-                <div class="team__item__footer__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
-                </div>
-              </div>
-            </div> <!-- / .team__item -->
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="team__item animate-sm-step-1" data-animate="animate-up">
-              <div class="team__item__img">
-                <img src="assets1/img/user_2.jpg" class="img-responsive" alt="...">
-              </div>
-              <div class="team__item__footer">
-                <h3 class="team__item__footer__heading">
-                  Richard Roe <small>/ CEO</small>
-                </h3>
-                <div class="team__item__footer__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
-                </div>
-              </div>
-            </div> <!-- / .team__item -->
-
-          </div>
-          <div class="col-sm-4">
-            
-            <div class="team__item animate-sm-step-2" data-animate="animate-up">
-              <div class="team__item__img">
-                <img src="assets1/img/user_3.jpg" class="img-responsive" alt="...">
-              </div>
-              <div class="team__item__footer">
-                <h3 class="team__item__footer__heading">
-                  John Doe <small>/ Front-end</small>
-                </h3>
-                <div class="team__item__footer__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
-                </div>
-              </div>
-            </div> <!-- / .team__item -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- STATS
-    ================================================== -->
-    <section class="section_stats" id="section_stats">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center sr-only">
-              Key statistics
-            </h2>
-    
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-3">
-            
-            <div class="stats__item">
-              <div class="stats__item__value" data-from="0" data-to="2500" data-speed="1500" data-refresh-interval="50">0</div>
-              <div class="stats__item__caption">Happy clients</div>
-            </div>
-
-          </div>
-          <div class="col-sm-3">
-            
-            <div class="stats__item">
-              <div class="stats__item__value" data-from="0" data-to="3200" data-speed="1500" data-refresh-interval="50">0</div>
-              <div class="stats__item__caption">Projects finished</div>
-            </div>
-
-          </div>
-          <div class="col-sm-3">
-            
-            <div class="stats__item">
-              <div class="stats__item__value" data-from="0" data-to="1300" data-speed="1500" data-refresh-interval="50">0</div>
-              <div class="stats__item__caption">Cups of coffee</div>
-            </div>
-
-          </div>
-          <div class="col-sm-3">
-            
-            <div class="stats__item">
-              <div class="stats__item__value" data-from="0" data-to="9800" data-speed="1500" data-refresh-interval="50">0</div>
-              <div class="stats__item__caption">Hours worked</div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- SKILLS
-    ================================================== -->
-    <section class="section_skills" id="section_skills">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            
-            <h2 class="page-header text-center">
-              Our key <span>skills</span>
-            </h2>
-
-            <p class="page-subheader text-center">
-              Major skills that help us create beautiful websites from stratch.
-            </p>
-
+          <h3 class="features__item__heading">
+            Цены
+          </h3>
+          <div class="features__item__body">
+            Прямые поставки товара от производителей и отработанные схемы грузоперевозок позволяют компании предлагать клиентам оптимальные цены по каждой товарной группе.
           </div>
         </div>
-        <div class="row row_centered">
-          <div class="col-sm-6">
-            
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corrupti, quibusdam assumenda harum, error atque labore minus.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate autem tempora obcaecati vel est unde maxime alias nihil earum officia? Odit iusto quo unde repellat qui cupiditate ratione nam quidem.
-            </p>
-    
+
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="features__item animate-sm-step-1" data-animate="animate-up">
+          <div class="features__item__icon">
+            <i class="ion-android-options"></i>
           </div>
-          <div class="col-sm-6">
-            
-            <div class="skills__item">
-              <h3 class="skills__item__heading">Design <small>95%</small></h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;" data-animate="animate-progress">
-                </div>
-              </div> <!-- / .progress -->
-            </div> <!-- / .skills__item -->
-
-            <div class="skills__item">
-              <h3 class="skills__item__heading">Development <small>75%</small></h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-animate="animate-progress">
-                </div>
-              </div> <!-- / .progress -->
-            </div> <!-- / .skills__item -->
-
-            <div class="skills__item">
-              <h3 class="skills__item__heading">Copywriting <small>85%</small></h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" data-animate="animate-progress">
-                </div>
-              </div> <!-- / .progress -->
-            </div> <!-- / .skills__item -->
-
-            <div class="skills__item">
-              <h3 class="skills__item__heading">Marketing <small>80%</small></h3>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" data-animate="animate-progress">
-                </div>
-              </div> <!-- / .progress -->
-            </div> <!-- / .skills__item -->
-
+          <h3 class="features__item__heading">
+            Мы дистрибьюторы
+          </h3>
+          <div class="features__item__body">
+            Мы являемся официальными дистрибьюторами таких известных торговых марок, как «Дэта», «Эффектон», «Dr.Klaus», «Штрих», Коралл, Berger. Официальными представителями Селигер-Агро, Фаско, Chamelion, Селена, Русалочка, Fit, Фумитокс, ОАО Лепсе, ОЗПИ «Альтернатива»
           </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
+        </div>
 
-    <!-- ABOUT
-    ================================================== -->
-    <section class="section_about" id="section_about">
-      <div class="container">
-        <div class="row row_centered">
-          <div class="col-sm-6 col-sm-push-6">
-            
-            <h2 class="page-header">
-              Powerful and <span>responsive</span>
-            </h2>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vero quaerat itaque enim repellat qui fuga repudiandae architecto excepturi nobis.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis expedita quia pariatur possimus nihil et eaque, quidem assumenda, doloribus praesentium quos rerum reiciendis, id. Dolores at rerum natus laudantium nesciunt!
-            </p>
-
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-2">
+        
+        <div class="features__item animate-sm-step-0" data-animate="animate-up">
+          <div class="features__item__icon">
+            <i class="ion-android-checkmark-circle"></i>
           </div>
-          <div class="col-sm-6 col-sm-pull-6">
-    
-            <div class="about__img">
-              <img src="assets1/img/4.jpg" class="img-responsive" alt="...">
+          <h3 class="features__item__heading">
+            Партнерская сеть
+          </h3>
+          <div class="features__item__body">
+            Среди партнеров нашей компании, как оптовые предприятия, так и розничные магазины Красноярска и Красноярского края, Республики Хакасия, Республики Тыва, Иркутской области
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="features__item animate-sm-step-1" data-animate="animate-up">
+          <div class="features__item__icon">
+            <i class="ion-android-send"></i>
+          </div>
+          <h3 class="features__item__heading">
+            Система скидок
+          </h3>
+          <div class="features__item__body">
+            Компания использует в работе с покупателями многоступенчатую систему цен и скидок. Стандартную шкалу скидок мы совмещаем с индивидуальным подходом к каждому клиенту.
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- ABOUT
+================================================== -->
+<section class="section_about" id="section_about">
+  <div class="container">
+    <div class="row row_centered">
+      <div class="col-sm-6 col-sm-push-6">
+        
+        <h2 class="page-header">
+          Оперативность и <span>сервис</span>
+        </h2>
+
+        <p>
+          Наличие собственного автотранспорта позволяет оперативно решать вопросы доставки товара по территории города и края, обеспечивая высокий уровень сервиса для клиента любого уровня.
+        </p>
+
+      </div>
+      <div class="col-sm-6 col-sm-pull-6">
+
+        <div class="about__img">
+          <img src="assets1/img/for.jpg" class="img-responsive" alt="...">
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row row_centered">
+      <div class="col-sm-6">
+        
+        <h2 class="page-header">
+          Квалифицированные <span>сотрудники</span>
+        </h2>
+
+        <p>
+          Для Вас работают специалисты:
+        </p>
+        <ul class="list-wf">
+          <li>
+            Грамотные и опытные
+          </li>
+          <li>
+            Энергичные и слаженные в работе
+          </li>
+          <li>
+            Коммуникабельные и способные к нестандартным решениям
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-sm-6">
+
+        <div class="about__img">
+          <img src="assets1/img/5.jpg" class="img-responsive" alt="...">
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- STATS
+================================================== -->
+<section class="section_stats" id="section_stats">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center sr-only">
+          Key statistics
+        </h2>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-3">
+        
+        <div class="stats__item">
+          <div class="stats__item__value" data-from="0" data-to="<%= @prods_count %>" data-speed="1500" data-refresh-interval="50">0</div>
+          <div class="stats__item__caption">Товаров в ассортименте</div>
+        </div>
+
+      </div>
+      <div class="col-sm-3">
+        
+        <div class="stats__item">
+          <div class="stats__item__value" data-from="0" data-to="3200" data-speed="1500" data-refresh-interval="50">0</div>
+          <div class="stats__item__caption">Projects finished</div>
+        </div>
+
+      </div>
+      <div class="col-sm-3">
+        
+        <div class="stats__item">
+          <div class="stats__item__value" data-from="0" data-to="1300" data-speed="1500" data-refresh-interval="50">0</div>
+          <div class="stats__item__caption">Cups of coffee</div>
+        </div>
+
+      </div>
+      <div class="col-sm-3">
+        
+        <div class="stats__item">
+          <div class="stats__item__value" data-from="0" data-to="9800" data-speed="1500" data-refresh-interval="50">0</div>
+          <div class="stats__item__caption">Hours worked</div>
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- TEAM
+================================================== -->
+<section class="section_team section_alt" id="section_team">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center">
+          <span>Лица</span> компании
+        </h2>
+
+        <p class="page-subheader text-center">
+          Команда трудолюбивых энтузиастов, которые оживляют нашу компанию каждый день
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-4">
+        
+        <div class="team__item animate-sm-step-0" data-animate="animate-up">
+          <div class="team__item__img">
+            <img src="assets1/img/user_1.jpg" class="img-responsive" alt="...">
+          </div>
+          <div class="team__item__footer">
+            <h3 class="team__item__footer__heading">
+              Judy Doe <small>/ Designer</small>
+            </h3>
+            <div class="team__item__footer__content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
             </div>
-    
           </div>
-        </div> <!-- / .row -->
-        <div class="row row_centered">
-          <div class="col-sm-6">
-            
-            <h2 class="page-header">
-              Easy to edit and <span>customize</span>
-            </h2>
+        </div> <!-- / .team__item -->
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vero quaerat itaque enim repellat qui fuga repudiandae architecto excepturi nobis.
-            </p>
-            <ul class="list-wf">
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem optio deleniti modi omnis.
-              </li>
-              <li>
-                Dolores quibusdam nostrum fuga quo temporibus, consequuntur distinctio repellendus incidunt beatae enim saepe rerum.
-              </li>
-              <li>Cumque vero quaerat itaque enim repellat qui fuga</li>
-            </ul>
-
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="team__item animate-sm-step-1" data-animate="animate-up">
+          <div class="team__item__img">
+            <img src="assets1/img/user_2.jpg" class="img-responsive" alt="...">
           </div>
-          <div class="col-sm-6">
-    
-            <div class="about__img">
-              <img src="assets1/img/5.jpg" class="img-responsive" alt="...">
+          <div class="team__item__footer">
+            <h3 class="team__item__footer__heading">
+              Richard Roe <small>/ CEO</small>
+            </h3>
+            <div class="team__item__footer__content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
             </div>
-    
           </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
+        </div> <!-- / .team__item -->
 
-    <!-- TESTIMONIALS
-    ================================================== -->
-    <section class="section_testimonials section_alt" id="section_testimonials">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center">
-              What <span>clients</span> say about us
-            </h2>
-
-            <p class="page-subheader text-center">
-              Effective and timely feedback is a critical component of a successful collaboration.
-            </p>
-    
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="team__item animate-sm-step-2" data-animate="animate-up">
+          <div class="team__item__img">
+            <img src="assets1/img/user_3.jpg" class="img-responsive" alt="...">
           </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-4">
-            
-            <blockquote class="testimonials__blockquote animate-sm-step-0" data-animate="animate-up">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
-              </p>
-              <footer>
-                <img src="assets1/img/avatar_3.png" class="img-responsive" alt="...">
-                <div>
-                  <h3 class="h5">John Doe</h3>
-                  <cite>Lorem ipsum</cite>
-                </div>
-              </footer>
-            </blockquote>
-
-          </div>
-          <div class="col-sm-4">
-            
-            <blockquote class="testimonials__blockquote animate-sm-step-1" data-animate="animate-up">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
-              </p>
-              <footer>
-                <img src="assets1/img/avatar_2.png" class="img-responsive" alt="...">
-                <div>
-                  <h3 class="h5">Richard Roe</h3>
-                  <cite>Lorem ipsum</cite>
-                </div>
-              </footer>
-            </blockquote>
-
-          </div>
-          <div class="col-sm-4">
-            
-            <blockquote class="testimonials__blockquote animate-sm-step-2" data-animate="animate-up">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
-              </p>
-              <footer>
-                <img src="assets1/img/avatar_1.png" class="img-responsive" alt="...">
-                <div>
-                  <h3 class="h5">Judy Doe</h3>
-                  <cite>Lorem ipsum</cite>
-                </div>
-              </footer>
-            </blockquote>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- NEWS
-    ================================================== -->
-    <section class="section_news" id="section_news">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center">
-              Our latest <span>news</span>
-            </h2>
-
-            <p class="page-subheader text-center">
-              Recent news and announcements about our company. 
-            </p>
-    
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-sm-4">
-            
-            <a href="#" class="news__item animate-sm-step-0" data-animate="animate-up">
-              <div class="news__item__img">
-                <img src="assets1/img/2.jpg" class="img-responsive" alt="...">
-                <time datetime="2017-01-12" class="news__item__img__date">
-                  Jan <span>12</span>
-                </time>
-              </div>
-              <div class="news__item__footer">
-                <h3 class="news__item__footer__heading">
-                  Lorem ipsum dolor sit
-                </h3>
-                <div class="news__item__footer__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
-                </div>
-              </div>
-            </a> <!-- / .news__item -->
-
-          </div>
-          <div class="col-sm-4">
-            
-            <a href="#" class="news__item animate-sm-step-1" data-animate="animate-up">
-              <div class="news__item__img">
-                <img src="assets1/img/5.jpg" class="img-responsive" alt="...">
-                <time datetime="2017-02-17" class="news__item__img__date">
-                  Feb <span>17</span>
-                </time>
-              </div>
-              <div class="news__item__footer">
-                <h3 class="news__item__footer__heading">
-                  Lorem ipsum dolor sit
-                </h3>
-                <div class="news__item__footer__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
-                </div>
-              </div>
-            </a> <!-- / .news__item -->
-
-          </div>
-          <div class="col-sm-4">
-            
-            <a href="#" class="news__item animate-sm-step-2" data-animate="animate-up">
-              <div class="news__item__img">
-                <img src="assets1/img/7.jpg" class="img-responsive" alt="...">
-                <time datetime="2017-02-25" class="news__item__img__date">
-                  Feb <span>25</span>
-                </time>
-              </div>
-              <div class="news__item__footer">
-                <h3 class="news__item__footer__heading">
-                  Lorem ipsum dolor sit
-                </h3>
-                <div class="news__item__footer__content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
-                </div>
-              </div>
-            </a> <!-- / .news__item -->
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- CONTACT
-    ================================================== -->
-    <section class="section_contact" id="section_contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-    
-            <h2 class="page-header text-center">
-              Get in touch <span>with us</span>
-            </h2>
-
-            <p class="page-subheader text-white-muted text-center">
-              Do not hesitate to drop us a couple of lines. 24/7 support guaranteed.
-            </p>
-    
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-xs-12">
-            
-            <div class="contact__container">
-              <div class="row">
-                <div class="col-sm-8">
-                  
-                  <!-- Form -->
-                  <form class="contact__container__form" id="form_sendemail">
-                    
-                    <!-- Header -->
-                    <div class="form-group">
-                      <h3>Send us a message</h3>
-                    </div>
-
-                    <!-- Alert message -->
-                    <div class="alert" id="form_message" role="alert"></div>
-                    
-                    <!-- Email -->
-                    <div class="form-group">
-                      <label for="email" class="sr-only">Email address *</label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email address">
-                      <span class="help-block"></span>
-                    </div>
-                    
-                    <!-- Name -->
-                    <div class="form-group">
-                      <label for="name" class="sr-only">Name *</label>
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name">
-                      <span class="help-block"></span>
-                    </div>
-                    
-                    <!-- Message -->
-                    <div class="form-group">
-                      <label for="message" class="sr-only">Message *</label>
-                      <textarea name="message" class="form-control" id="message" placeholder="Enter your message"></textarea>
-                      <span class="help-block"></span>
-                    </div>
-                    
-                    <!-- Submit -->
-                    <button type="submit" class="btn btn-primary">
-                      Send Message
-                    </button>
-
-                  </form>
-
-                </div>
-                <div class="col-sm-4">
-                  
-                  <ul class="contact__container__info">
-                    <li>
-                      <h3>Contact info</h3>
-                    </li>
-                    <li>
-                      <i class="ion-android-pin"></i>
-                      <p>
-                        Lorem ipsum dolor sit amet <br>
-                        Consectetur adipisicing elit
-                      </p>
-                    </li>
-                    <li>
-                      <i class="ion-android-call"></i>
-                      <p>
-                        <a href="tel:00000000000">+0 (000) 000-00-00</a>
-                      </p>
-                    </li>
-                    <li>
-                      <i class="ion-android-mail"></i>
-                      <p>
-                        <a href="mailto:admin@domain.com">admin@domain.com</a>
-                      </p>
-                    </li>
-                  </ul>
-
-                </div>
-              </div> <!-- / .row -->
+          <div class="team__item__footer">
+            <h3 class="team__item__footer__heading">
+              John Doe <small>/ Front-end</small>
+            </h3>
+            <div class="team__item__footer__content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
             </div>
-
           </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
+        </div> <!-- / .team__item -->
 
-    <!-- FOOTER
-    ================================================== -->
-    <footer class="section_footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-9">
-    
-            <p class="footer__copyright">
-              <span id="footer__year">2017</span> &copy; Wolfram theme
-            </p>
-    
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- PRICING
+================================================== -->
+<section class="section_pricing" id="section_pricing">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center">
+          Гибкая система <span>скидок</span>
+        </h2>
+
+        <p class="page-subheader text-center">
+          Используется многоступенчатая система цен и скидок.
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-6">
+        
+        <div class="pricing__item animate-sm-step-0" data-animate="animate-up">
+          <h3 class="pricing__item__heading">
+            Разовые скидки от суммы накладной
+          </h3>
+          <div class="pricing__item__price">
+            <small> от 5 000 руб.</small> 2%
           </div>
-          <div class="col-sm-3">
-            
-            <ul class="footer__social">
-              <% if current_user %>
+          <div class="pricing__item__price">
+            <small> от 10 000 руб.</small> 3%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 20 000 руб.</small> 5%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 45 000 руб.</small> 8%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 60 000 руб.</small> 10%
+          </div>
+         </div> <!-- / .pricing__item -->
+
+      </div>
+      <div class="col-sm-6">
+        
+        <div class="pricing__item animate-sm-step-1" data-animate="animate-up">
+          <h3 class="pricing__item__heading">
+            Накопительные скидки на текущий месяц<br> по результатам товарооборота<br> за предыдущий месяц или год
+          </h3>
+          <div class="pricing__item__price">
+            <small> от 30 000 руб.</small> 3%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 60 000 руб.</small> 5%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 90 000 руб.</small> 8%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 150 000 руб.</small> 10%
+          </div>
+        </div> <!-- / .pricing__item -->
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- SKILLS
+================================================== -->
+<!-- <section class="section_skills" id="section_skills">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <h2 class="page-header text-center">
+          Our key <span>skills</span>
+        </h2>
+
+        <p class="page-subheader text-center">
+          Major skills that help us create beautiful websites from stratch.
+        </p>
+
+      </div>
+    </div>
+    <div class="row row_centered">
+      <div class="col-sm-6">
+        
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corrupti, quibusdam assumenda harum, error atque labore minus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate autem tempora obcaecati vel est unde maxime alias nihil earum officia? Odit iusto quo unde repellat qui cupiditate ratione nam quidem.
+        </p>
+
+      </div>
+      <div class="col-sm-6">
+        
+        <div class="skills__item">
+          <h3 class="skills__item__heading">Design <small>95%</small></h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;" data-animate="animate-progress">
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3 class="skills__item__heading">Development <small>75%</small></h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-animate="animate-progress">
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3 class="skills__item__heading">Copywriting <small>85%</small></h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" data-animate="animate-progress">
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3 class="skills__item__heading">Marketing <small>80%</small></h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" data-animate="animate-progress">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> 
+  </div>
+</section> -->
+
+<!-- NEWS
+================================================== -->
+<section class="section_news" id="section_news">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center">
+          Осуществляем <span>доставку</span>
+        </h2>
+
+        <p class="page-subheader text-center">
+          Оперативно решаем вопросы доставки товара по территории города и края 
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-4">
+        
+        <a href="#" class="news__item animate-sm-step-0" data-animate="animate-up">
+          <div class="news__item__img">
+            <img src="assets1/img/krs.jpg" class="img-responsive" alt="...">
+            <time datetime="2017-01-12" class="news__item__img__date">
+              <!-- Jan <span>12</span> -->
+            </time>
+          </div>
+          <div class="news__item__footer">
+            <h3 class="news__item__footer__heading">
+              По городу Красноярску
+            </h3>
+            <div class="news__item__footer__content">
+              От 20тр (Сумма закупа) бесплатно
+            </div>
+          </div>
+        </a> <!-- / .news__item -->
+
+      </div>
+      <div class="col-sm-4">
+        
+        <a href="#" class="news__item animate-sm-step-1" data-animate="animate-up">
+          <div class="news__item__img">
+            <img src="assets1/img/div.jpg" class="img-responsive" alt="...">
+            <time datetime="2017-02-17" class="news__item__img__date">
+              <!-- Feb <span>17</span> -->
+            </time>
+          </div>
+          <div class="news__item__footer">
+            <h3 class="news__item__footer__heading">
+              Пригород
+            </h3>
+            <div class="news__item__footer__content">
+              Сосновоборск, Дивногорск, Железногорск, и т.п. до 50 км от 50тр бесплатно.
+            </div>
+          </div>
+        </a> <!-- / .news__item -->
+
+      </div>
+      <div class="col-sm-4">
+        
+        <a href="#" class="news__item animate-sm-step-2" data-animate="animate-up">
+          <div class="news__item__img">
+            <img src="assets1/img/truck.jpg" class="img-responsive" alt="...">
+            <time datetime="2017-02-25" class="news__item__img__date">
+              <!-- Feb <span>25</span> -->
+            </time>
+          </div>
+          <div class="news__item__footer">
+            <h3 class="news__item__footer__heading">
+              Междугородняя доставка
+            </h3>
+            <div class="news__item__footer__content">
+              Ачинск, Лесосибирск, Абакан, Канск и т.д. от 100тр., платно 5 или 8р/км.
+            </div>
+          </div>
+        </a> <!-- / .news__item -->
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- TESTIMONIALS
+================================================== -->
+<section class="section_testimonials section_alt" id="section_testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center">
+          Что <span>клиенты</span> говорят о нас
+        </h2>
+
+        <p class="page-subheader text-center">
+          Мы всегда рады видеть новых клиентов в числе наших постоянных партнеров и готовы приложить все усилия для достижения благоприятных взаимоотношений и взаимовыгодного сотрудничества.
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-sm-4">
+        
+        <blockquote class="testimonials__blockquote animate-sm-step-0" data-animate="animate-up">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
+          </p>
+          <footer>
+            <img src="assets1/img/avatar_3.png" class="img-responsive" alt="...">
+            <div>
+              <h3 class="h5">John Doe</h3>
+              <cite>Lorem ipsum</cite>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+      <div class="col-sm-4">
+        
+        <blockquote class="testimonials__blockquote animate-sm-step-1" data-animate="animate-up">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
+          </p>
+          <footer>
+            <img src="assets1/img/avatar_2.png" class="img-responsive" alt="...">
+            <div>
+              <h3 class="h5">Richard Roe</h3>
+              <cite>Lorem ipsum</cite>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+      <div class="col-sm-4">
+        
+        <blockquote class="testimonials__blockquote animate-sm-step-2" data-animate="animate-up">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
+          </p>
+          <footer>
+            <img src="assets1/img/avatar_1.png" class="img-responsive" alt="...">
+            <div>
+              <h3 class="h5">Judy Doe</h3>
+              <cite>Lorem ipsum</cite>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- CONTACT
+================================================== -->
+<section class="section_contact" id="section_contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+
+        <h2 class="page-header text-center">
+          Свяжитесь <span>с нами</span>
+        </h2>
+
+        <p class="page-subheader text-white-muted text-center">
+          И не забудьте написать пару строк в сообщении для большего взаимопонимания
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <div class="contact__container">
+          <div class="row">
+            <div class="col-sm-8">
+              
+              <!-- Form -->
+              <form class="contact__container__form" id="form_sendemail">
+                
+                <!-- Header -->
+                <div class="form-group">
+                  <h3>Напишите нам</h3>
+                </div>
+
+                <!-- Alert message -->
+                <div class="alert" id="form_message" role="alert"></div>
+                
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email" class="sr-only">Email *</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Введите ваш почтовый ящик">
+                  <span class="help-block"></span>
+                </div>
+                
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="name" class="sr-only">Имя *</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Введите ваше имя">
+                  <span class="help-block"></span>
+                </div>
+                
+                <!-- Message -->
+                <div class="form-group">
+                  <label for="message" class="sr-only">Сообщение *</label>
+                  <textarea name="message" class="form-control" id="message" placeholder="Введите сообщение"></textarea>
+                  <span class="help-block"></span>
+                </div>
+                
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary">
+                  Отправить
+                </button>
+
+              </form>
+
+            </div>
+            <div class="col-sm-4">
+              
+              <ul class="contact__container__info">
                 <li>
-                  <%= link_to(destroy_user_session_path, 
-                      method: :delete, 
-                      title: current_user.email) do %>
-                    <i class="ion-android-person"></i>
-                  <% end %>
+                  <h3>Контактные данные</h3>
                 </li>
+                <li>
+                  <i class="ion-android-pin"></i>
+                  <p>
+                    <a href="https://2gis.ru/krasnoyarsk/firm/985690699475281?queryState=center%2F93.003999%2C56.013863%2Fzoom%2F16">
+                      г. Красноярск, проезд Заводской, дом 2, строение 6
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <i class="ion-android-call"></i>
+                  <p>
+                    <a href="tel:+73912055053">+7 (391) 205-50-53 (менеджер)</a>
+                  </p>
+                </li>
+                <li>
+                  <i class="ion-android-call"></i>
+                  <p>
+                    <a href="tel:+73912055719">+7 (391) 205-57-19</a>
+                  </p>
+                </li>
+                <li>
+                  <i class="ion-android-call"></i>
+                  <p>
+                    <a href="tel:+73912055052">+7 (391) 205-50-52 (торговый зал)</a>
+                  </p>
+                </li>
+                <li>
+                  <i class="ion-android-mail"></i>
+                  <p>
+                    <a href="mailto:admin@domain.com">admin@domain.com</a>
+                  </p>
+                </li>
+                <li></li>
+                <li>
+                  <h3>График работы</h3>
+                </li>
+                <li>
+                  <p>
+                    Пн-пт с 9-00 до 17-00<br>
+                    Суббота с 9-00 до 15-00<br>
+                    Воскресенье – выходной
+                  </p>
+                </li>
+              </ul>
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<!-- FOOTER
+================================================== -->
+<footer class="section_footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9">
+
+        <p class="footer__copyright">
+          <span id="footer__year">2017</span> &copy; Троговый Дом Химик
+        </p>
+
+      </div>
+      <div class="col-sm-3">
+        
+        <ul class="footer__social">
+          <% if current_user %>
+            <li>
+              <%= link_to "/admin" do %>
+                <i class="ion-android-person"></i>
               <% end %>
-              <li>
-                <a class="twitter" href="#">
-                  <i class="ion-social-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a class="facebook" href="#">
-                  <i class="ion-social-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a class="pinterest" href="#">
-                  <i class="ion-social-pinterest"></i>
-                </a>
-              </li>
-            </ul>
+            </li>
+          <% end %>
+          <li>
+            <a class="twitter" href="#">
+              <i class="ion-social-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook" href="#">
+              <i class="ion-social-facebook"></i>
+            </a>
+          </li>
+        </ul>
 
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </footer>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</footer>
 
-    <!-- JAVASCRIPT
-    ================================================== -->
+<!-- JAVASCRIPT
+================================================== -->
 
-    <!-- JS Plugins -->
-    <script src="assets1/plugins/smoothscroll/smoothscroll.min.js"></script>
-    <script src="assets1/plugins/backstretch/jquery.backstretch.min.js"></script>
-    <script src="assets1/plugins/countTo/jquery.countTo.js"></script>
-    <script src="assets1/plugins/contact-form/contact.js"></script>
-    <script src="assets1/plugins/waypoints/jquery.waypoints.min.js"></script>
-
-    <!-- JS Custom -->
-    <!--build:js assets1/js/theme.js -->
-    <!-- endbuild -->
-  </body>
-</html>
+<!-- JS Plugins -->
+<script src="assets1/plugins/smoothscroll/smoothscroll.min.js"></script>
+<script src="assets1/plugins/backstretch/jquery.backstretch.min.js"></script>
+<script src="assets1/plugins/countTo/jquery.countTo.js"></script>
+<script src="assets1/plugins/contact-form/contact.js"></script>
+<script src="assets1/plugins/waypoints/jquery.waypoints.min.js"></script>

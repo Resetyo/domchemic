@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Domchemic</title>
+    <title>Троговый Дом Химик</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets1/plugins/ionicons/css/ionicons.min.css">
   </head>
 
-  <body>
- <!--    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> -->
-
+  <body data-spy="scroll" data-target="#navbar_main" data-offset="80">
     <%= yield %>
   </body>
 </html>

@@ -38,4 +38,14 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Role' do
+    visible false
+  end
+  config.model 'User' do
+    visible false
+  end
+  config.model 'Product' do
+    label "Продукты"
+  end
 end
