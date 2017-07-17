@@ -25,6 +25,7 @@ gem 'rails_admin', '~> 1.2'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'roo-xls'
 gem 'datagrid', '1.5.4'
+gem 'carrierwave', '1.0.0.rc'
 gem 'whenever', :require => false
 
 gem 'unicorn', '5.1.0'

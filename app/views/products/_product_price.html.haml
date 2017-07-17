@@ -1,0 +1,7 @@
+-quantity = model.quantity_in_list(session_id)
+%span{:'data-price' => "#{price}"}
+  - if quantity > 1
+    ="#{price} р. (#{(quantity*price).round(2)} р.)"
+  -else
+    =price
+    р.

@@ -120,121 +120,28 @@
   </div> <!-- / .container -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6 col-lg-4">
-        
-        <div class="portfolio__item">
-          <div class="portfolio__item__img">
-            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
-            <div class="portfolio__item__img__mask">
-              <h3 class="text-center">
-                Надувной матрас-подушка для отдыха
-              </h3>
-              <div class="text-center">
-                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
-                  Подробнее
-                </a>
-              </div>
-            </div> <!-- / .portfolio__item__img__mask -->
-          </div> <!-- / .portfolio__item__img -->
-        </div> <!-- / .portfolio__item -->
+      <% @promo_products.each do |promo_product| %>
+        <div class="col-sm-6 col-lg-4">
+          
+          <div class="portfolio__item">
+            <div class="portfolio__item__img">
+              <img src="<%= promo_product.image.url %>" class="img-responsive" alt="...">
+              <div class="portfolio__item__img__mask">
+                <h3 class="text-center">
+                  <%= promo_product.name %>
+                  Надувной матрас-подушка для отдыха
+                </h3>
+                <div class="text-center">
+                  <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="<%= promo_product.title %>" data-img="<%= promo_product.image.url %>" data-content="<%= promo_product.desc %>">
+                    Подробнее
+                  </a>
+                </div>
+              </div> <!-- / .portfolio__item__img__mask -->
+            </div> <!-- / .portfolio__item__img -->
+          </div> <!-- / .portfolio__item -->
 
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        
-        <div class="portfolio__item">
-          <div class="portfolio__item__img">
-            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
-            <div class="portfolio__item__img__mask">
-              <h3 class="text-center">
-                Надувной матрас-подушка для отдыха
-              </h3>
-              <div class="text-center">
-                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
-                  Подробнее
-                </a>
-              </div>
-            </div> <!-- / .portfolio__item__img__mask -->
-          </div> <!-- / .portfolio__item__img -->
-        </div> <!-- / .portfolio__item -->
-
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        
-        <div class="portfolio__item">
-          <div class="portfolio__item__img">
-            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
-            <div class="portfolio__item__img__mask">
-              <h3 class="text-center">
-                Надувной матрас-подушка для отдыха
-              </h3>
-              <div class="text-center">
-                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
-                  Подробнее
-                </a>
-              </div>
-            </div> <!-- / .portfolio__item__img__mask -->
-          </div> <!-- / .portfolio__item__img -->
-        </div> <!-- / .portfolio__item -->
-
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        
-        <div class="portfolio__item">
-          <div class="portfolio__item__img">
-            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
-            <div class="portfolio__item__img__mask">
-              <h3 class="text-center">
-                Надувной матрас-подушка для отдыха
-              </h3>
-              <div class="text-center">
-                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
-                  Подробнее
-                </a>
-              </div>
-            </div> <!-- / .portfolio__item__img__mask -->
-          </div> <!-- / .portfolio__item__img -->
-        </div> <!-- / .portfolio__item -->
-
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        
-        <div class="portfolio__item">
-          <div class="portfolio__item__img">
-            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
-            <div class="portfolio__item__img__mask">
-              <h3 class="text-center">
-                Надувной матрас-подушка для отдыха
-              </h3>
-              <div class="text-center">
-                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
-                  Подробнее
-                </a>
-              </div>
-            </div> <!-- / .portfolio__item__img__mask -->
-          </div> <!-- / .portfolio__item__img -->
-        </div> <!-- / .portfolio__item -->
-
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        
-        <div class="portfolio__item">
-          <div class="portfolio__item__img">
-            <img src="assets1/img/chma.jpg" class="img-responsive" alt="...">
-            <div class="portfolio__item__img__mask">
-              <h3 class="text-center">
-                Надувной матрас-подушка для отдыха
-              </h3>
-              <div class="text-center">
-                <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Надувной матрас-подушка для отдыха на пляже и не только" data-img="assets1/img/chma.jpg" data-content="Отправляясь на отдых, следует подумать о добротном надувном матрасе. Сегодня особую популярность среди любителей пляжного отдыха приобрели так называемые «матрасы-подушки». Цена 800 рублей.">
-                  Подробнее
-                </a>
-              </div>
-            </div> <!-- / .portfolio__item__img__mask -->
-          </div> <!-- / .portfolio__item__img -->
-        </div> <!-- / .portfolio__item -->
-
-      </div>
-
+        </div>
+      <% end %>
     </div> <!-- / .row -->
   </div> <!-- / .container-fluid -->
 </section>
@@ -357,7 +264,7 @@
       <div class="col-sm-6 col-sm-pull-6">
 
         <div class="about__img">
-          <img src="assets1/img/for.jpg" class="img-responsive" alt="...">
+          <img src="assets1/img/track.jpg" class="img-responsive" alt="...">
         </div>
 
       </div>
@@ -366,7 +273,7 @@
       <div class="col-sm-6">
         
         <h2 class="page-header">
-          Квалифицированные <span>сотрудники</span>
+          Квалифици&shy;рованные <span>сотрудники</span>
         </h2>
 
         <p>
@@ -388,7 +295,7 @@
       <div class="col-sm-6">
 
         <div class="about__img">
-          <img src="assets1/img/5.jpg" class="img-responsive" alt="...">
+          <img src="assets1/img/team.jpg" class="img-responsive" alt="...">
         </div>
 
       </div>
@@ -418,7 +325,7 @@
         </div>
 
       </div>
-      <div class="col-sm-3">
+<!--       <div class="col-sm-3">
         
         <div class="stats__item">
           <div class="stats__item__value" data-from="0" data-to="3200" data-speed="1500" data-refresh-interval="50">0</div>
@@ -441,14 +348,14 @@
           <div class="stats__item__caption">Hours worked</div>
         </div>
 
-      </div>
+      </div> -->
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </section>
 
 <!-- TEAM
 ================================================== -->
-<section class="section_team section_alt" id="section_team">
+<!-- <section class="section_team section_alt" id="section_team">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -462,7 +369,7 @@
         </p>
 
       </div>
-    </div> <!-- / .row -->
+    </div> 
     <div class="row">
       <div class="col-sm-4">
         
@@ -478,7 +385,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
             </div>
           </div>
-        </div> <!-- / .team__item -->
+        </div>
 
       </div>
       <div class="col-sm-4">
@@ -495,7 +402,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
             </div>
           </div>
-        </div> <!-- / .team__item -->
+        </div>
 
       </div>
       <div class="col-sm-4">
@@ -512,12 +419,12 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquam omnis.
             </div>
           </div>
-        </div> <!-- / .team__item -->
+        </div>
 
       </div>
-    </div> <!-- / .row -->
-  </div> <!-- / .container -->
-</section>
+    </div>
+  </div>
+</section> -->
 
 <!-- PRICING
 ================================================== -->
@@ -531,7 +438,8 @@
         </h2>
 
         <p class="page-subheader text-center">
-          Используется многоступенчатая система цен и скидок.
+          Используется многоступенчатая система цен и скидок.<br>
+          Минимальный чек в магазине 3000 руб.
         </p>
 
       </div>
@@ -585,73 +493,6 @@
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </section>
-
-<!-- SKILLS
-================================================== -->
-<!-- <section class="section_skills" id="section_skills">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        
-        <h2 class="page-header text-center">
-          Our key <span>skills</span>
-        </h2>
-
-        <p class="page-subheader text-center">
-          Major skills that help us create beautiful websites from stratch.
-        </p>
-
-      </div>
-    </div>
-    <div class="row row_centered">
-      <div class="col-sm-6">
-        
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corrupti, quibusdam assumenda harum, error atque labore minus.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate autem tempora obcaecati vel est unde maxime alias nihil earum officia? Odit iusto quo unde repellat qui cupiditate ratione nam quidem.
-        </p>
-
-      </div>
-      <div class="col-sm-6">
-        
-        <div class="skills__item">
-          <h3 class="skills__item__heading">Design <small>95%</small></h3>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;" data-animate="animate-progress">
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__item">
-          <h3 class="skills__item__heading">Development <small>75%</small></h3>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" data-animate="animate-progress">
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__item">
-          <h3 class="skills__item__heading">Copywriting <small>85%</small></h3>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" data-animate="animate-progress">
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__item">
-          <h3 class="skills__item__heading">Marketing <small>80%</small></h3>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" data-animate="animate-progress">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div> 
-  </div>
-</section> -->
 
 <!-- NEWS
 ================================================== -->
@@ -757,13 +598,13 @@
         
         <blockquote class="testimonials__blockquote animate-sm-step-0" data-animate="animate-up">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
+            Действительно отличная компания. Работаю недалеко от них, я и мои коллеги частенько туда ходят за покупками. И ассортимент и цены просто притягивают в эту компанию. Хочу только посоветовать покупателям, старайтесь не ходить туда в предпраздничные дни (например перед новым годом). Очень много покупателей и мы просто ходим и мешаемся друг другу. Желаю удачи и благополучия этой организации!
           </p>
           <footer>
-            <img src="assets1/img/avatar_3.png" class="img-responsive" alt="...">
+            <img src="assets1/img/avatar_1.png" class="img-responsive" alt="...">
             <div>
-              <h3 class="h5">John Doe</h3>
-              <cite>Lorem ipsum</cite>
+              <h3 class="h5">nikkka</h3>
+              <!-- <cite>Lorem ipsum</cite> -->
             </div>
           </footer>
         </blockquote>
@@ -773,19 +614,19 @@
         
         <blockquote class="testimonials__blockquote animate-sm-step-1" data-animate="animate-up">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum delectus quod eligendi distinctio. Fugiat sequi ad dolor id est voluptas, ab, optio obcaecati, corporis dolore dignissimos accusantium hic ratione?
+            Всем, здравствуйте! Отличная компания. Закупался сегодня первый раз, ассортимент очень большой, сначала тяжеловато разобраться, но после получаса проведенного в магазине все понял. Девушки консультанты отзывчивые, на любой вопрос ответят, покажут где какой товар находится. На складах тоже все быстренько собирают в коробки без проволочек, как это бывает в других оптовых магазинах. Планирую дальше сотрудничать с этой компанией и всем оптовикам рекомендую!
           </p>
           <footer>
             <img src="assets1/img/avatar_2.png" class="img-responsive" alt="...">
             <div>
-              <h3 class="h5">Richard Roe</h3>
-              <cite>Lorem ipsum</cite>
+              <h3 class="h5">gercules75</h3>
+              <!-- <cite>Lorem ipsum</cite> -->
             </div>
           </footer>
         </blockquote>
 
       </div>
-      <div class="col-sm-4">
+     <!--  <div class="col-sm-4">
         
         <blockquote class="testimonials__blockquote animate-sm-step-2" data-animate="animate-up">
           <p>
@@ -800,7 +641,7 @@
           </footer>
         </blockquote>
 
-      </div>
+      </div> -->
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </section>
@@ -951,16 +792,6 @@
               <% end %>
             </li>
           <% end %>
-          <li>
-            <a class="twitter" href="#">
-              <i class="ion-social-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook" href="#">
-              <i class="ion-social-facebook"></i>
-            </a>
-          </li>
         </ul>
 
       </div>

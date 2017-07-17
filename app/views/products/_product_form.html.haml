@@ -1,0 +1,6 @@
+= form_tag new_list, remote: true, class: "product-form" do
+  = hidden_field_tag :product_codes, model.code
+  = button_tag model.name, class: "product-item", type: "submit"
+  - active = (codes_list && codes_list.include?(model.code)) ? "pressed" : ""
+  =link_to remove_from_list_path(code: model.code), class: "product-count product-count-#{model.code} #{active}", remote: true, method: :delete do
+    %span=model.quantity_in_list(session_id)

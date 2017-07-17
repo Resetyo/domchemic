@@ -48,4 +48,10 @@ RailsAdmin.config do |config|
   config.model 'Product' do
     label "Продукты"
   end
+  config.model 'List' do
+    label "Списки"
+  end
+  config.model 'PromoProduct' do
+    label "Продукты на главной"
+  end
 end

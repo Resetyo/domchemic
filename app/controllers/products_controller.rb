@@ -1,8 +1,11 @@
 class ProductsController < ApplicationController
   def index
     @grid = ProductsGrid.new(params[:products_grid]) do |scope|
-      scope.page(params[:page]).per(70)
+      scope.page(params[:page]).per(50)
     end
+    @new_list = List.new
+    @codes_list = Product.codes_list(cookies[:session_id])
+    @session_id = cookies[:session_id]
   end
 
   def upload
@@ -16,6 +19,13 @@ class ProductsController < ApplicationController
         file.write(uploaded_io.read.force_encoding("utf-8"))
       end
     end
+    redirect_to rails_admin_path
+  end
+
+  def delete_price
+    old_files = Dir.glob("#{Rails.root}/public/uploads/products/*")
+    old_files.each { |f| File.delete(f) }
+
     redirect_to rails_admin_path
   end
 end

@@ -1,0 +1,31 @@
+var product_count_tag = $('.product-count-<%= @code %>');
+var product_count = parseInt(product_count_tag.find('span').text());
+product_count_tag.find('span').text(product_count - 1);
+var price_tag = product_count_tag.closest('tr').find('td.price span');
+var price_single = parseFloat(price_tag.data("price"));
+if (product_count == 1) {
+  product_count_tag.fadeOut().removeClass('pressed');
+    // .closest('tr').fadeOut(); //УБРАТЬ ИЗ КАТАЛОГА, В СПИСКЕ ОСТАВИТЬ
+}
+if(product_count > 2) {
+  price_tag.text( price_single + " р. (" + (price_single*(product_count - 1)).toFixed(2) + "\xa0р.)" );
+} else {
+  price_tag.text( price_single + " р." );
+}
+var count_tag = $('.products-count');
+var amount_count =  parseInt(count_tag.text());
+count_tag.text(amount_count - 1);
+if (amount_count == 1){
+  count_tag.fadeOut();
+}
+
+var table_list_div = $('.table-list');
+if (table_list_div.length > 0) {
+  var amount_td = table_list_div
+                      .find('tbody tr')
+                      .last()
+                      .find('td')
+                      .last();
+  amount = parseFloat(amount_td.text());
+  amount_td.text((amount - price_single).toFixed(2) + " р.");
+}

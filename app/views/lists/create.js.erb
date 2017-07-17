@@ -1,0 +1,26 @@
+var product_count_tag = $('.product-count-<%= @code %>');
+var product_count = parseInt(product_count_tag.find('span').text());
+product_count_tag.addClass('pressed')
+  .find('span')
+  .text(product_count + 1);
+if (product_count > 0) {
+  var price_tag = product_count_tag.closest('tr').find('td.price span');
+  var price_single = parseFloat(price_tag.data("price"));
+  price_tag.text( price_single + " р. (" + (price_single*(product_count + 1)).toFixed(2) + "\xa0р.)" );
+}
+
+var count_tag = $('.products-count');
+var amount_count = count_tag.text().length > 0 ? parseInt(count_tag.text()) : 0;
+count_tag.text(amount_count + 1);
+count_tag.fadeIn();
+
+var table_list_div = $('.table-list');
+if (table_list_div.length > 0) {
+  var amount_td = table_list_div
+                      .find('tbody tr')
+                      .last()
+                      .find('td')
+                      .last();
+  amount = parseFloat(amount_td.text());
+  amount_td.text((amount + price_single).toFixed(2) + " р.");
+}

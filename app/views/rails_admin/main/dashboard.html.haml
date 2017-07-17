@@ -30,6 +30,10 @@
               %ul.inline.list-inline= menu_for :collection, abstract_model, nil, true
 = form_tag("/upload", :multipart => true) do 
   = label_tag 'Выбрать прайс'
+  - path_to_file = Dir.glob("#{Rails.root}/public/uploads/products/*")
+  - if path_to_file.present?
+    = "<br>Файл лежит не сервере и вскоре будет загружен, можно выбрать другой файл или ".html_safe
+    = link_to "Удалить файл", "/delete_price"
   = file_field_tag :file
   = submit_tag "Залить файл на сервер"
 - if @auditing_adapter && authorized?(:history_index)
