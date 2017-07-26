@@ -6,8 +6,8 @@ lock '3.6.1'
 # ------------------------------
 
 set :application,    'domhimik'
-set :login,          'domhimik'
-set :user,           'hosting_domhimik'
+set :login,          'ostorodonodor'
+set :user,           'hosting_ostorodonodor'
 
 set :deploy_to,      "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
 set :unicorn_conf,   "/etc/unicorn/#{fetch(:application)}.#{fetch(:login)}.rb"
