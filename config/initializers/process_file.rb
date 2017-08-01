@@ -13,7 +13,8 @@ module ProcessFile
 
       csv.each do |row|
         if row[0].present? && row[2].present? && row[0] != "Наименование товара"
-          name = row[0].gsub(/\(.+\)/,'')[/\s.+\//]
+          name = row[0].gsub(/\(.+\)/,'')
+          name = name.gsub(/\/.+/,'') if name
           code = row[0][/\A\S+\d/]
         end
         product = Product.create(code: code, name: name[1..-2], price: row[2].to_f) if name
