@@ -3,6 +3,8 @@
   <a href="/products" data-turbolinks="false" class="btn btn-primary">Каталог</a>
 </header>
 <h1>Список отобранных товаров</h1>
+<p class="text-center"><%= link_to "Скачать список в Excel", lists_path(format: 'xls') %></p>
+
 <div class="table-wrapper table-list" data-amount="<%= @amount %>">
   <%= datagrid_table @grid %>
   <%= paginate(@grid.assets) %>

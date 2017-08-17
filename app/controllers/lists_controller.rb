@@ -1,13 +1,13 @@
 class ListsController < ApplicationController
   def index
-    list = Product.user_list(cookies[:session_id])
+    @list = Product.user_list(cookies[:session_id])
     @grid = ProductsGrid.new(params[:products_grid]) do |scope|
-      list.page(params[:page]).per(50)
+      @list.page(params[:page]).per(50)
     end
     @codes_list = Product.codes_list(cookies[:session_id])
     @session_id = cookies[:session_id]
     @amount = 0
-    list.each do |product|
+    @list.each do |product|
       @amount += @codes_list.count(product.code) * product.price
     end
     @amount = @amount.round(2)

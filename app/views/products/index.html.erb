@@ -8,6 +8,7 @@
 </header>
 <h1>Каталог продукции</h1>
 <p class="text-center">Минимальный чек в магазине 3000 руб.</p>
+<p class="text-center"><%= link_to "Скачать прайс в Excel", products_path(format: 'xls') %></p>
 <div class="table-wrapper table-catalog">
   <%= datagrid_form_for @grid, :method => :get, :url => products_path %>
   

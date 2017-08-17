@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717143626) do
+ActiveRecord::Schema.define(version: 20170817074146) do
 
   create_table "lists", force: :cascade do |t|
     t.string   "product_codes"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170717143626) do
     t.float    "price"
     t.integer  "category_id"
     t.string   "code"
+    t.string   "full_name"
   end
 
   create_table "promo_products", force: :cascade do |t|

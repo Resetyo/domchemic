@@ -1,0 +1,28 @@
+<table border="1">
+  <tr>
+    <td colspan="6">Прайс-лист фирмы ИП Осипов Сергей Васильевич (по всем разделам) за <%= Time.now.strftime("%d.%m.%Y") %></td>
+
+  </tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>=СУММ(F5:F27242)</td></tr>
+  <tr>
+    <th>Наименование товара</th>
+    <th>Ед.</th>
+    <th>Опт.цена</th>
+    <th>Вал</th>
+    <th>Кол.</th>
+    <th>Сум.заказа</th>
+  </tr>
+  <% @products.each_with_index do |product, i| %>
+    <% row = i + 5 %>
+    <tr>
+      <td><%= product.full_name %></td>
+      <td>шт.</td>
+      <td><%= product.price %></td>
+      <td>руб</td>
+      <td></td>
+      <td><%= "=C#{row}*E#{row}" %></td>
+    </tr>
+  <% end %>
+</table>
+

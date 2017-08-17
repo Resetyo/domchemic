@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
     @new_list = List.new
     @codes_list = Product.codes_list(cookies[:session_id])
     @session_id = cookies[:session_id]
+    @products = Product.all
   end
 
   def upload
