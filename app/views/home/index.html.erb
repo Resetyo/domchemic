@@ -324,7 +324,7 @@
         </div>
 
       </div>
-<!--       <div class="col-sm-3">
+  <!--       <div class="col-sm-3">
         
         <div class="stats__item">
           <div class="stats__item__value" data-from="0" data-to="3200" data-speed="1500" data-refresh-interval="50">0</div>
@@ -670,7 +670,8 @@
             <div class="col-sm-8">
               
               <!-- Form -->
-              <form class="contact__container__form" id="form_sendemail">
+              <!-- <form class="contact__container__form" id="form_sendemail"> -->
+              <%= form_for @contact, html: { class: "contact__container__form" } do |f| %>
                 
                 <!-- Header -->
                 <div class="form-group">
@@ -683,21 +684,30 @@
                 <!-- Email -->
                 <div class="form-group">
                   <label for="email" class="sr-only">Email *</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Введите ваш почтовый ящик">
+                  <%= f.email_field :email, 
+                      class: 'form-control', 
+                      placeholder: "Введите ваш почтовый ящик", 
+                      required: true %>
                   <span class="help-block"></span>
                 </div>
                 
                 <!-- Name -->
                 <div class="form-group">
                   <label for="name" class="sr-only">Имя *</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Введите ваше имя">
+                  <%= f.text_field :name, 
+                      class: 'form-control', 
+                      placeholder: "Введите ваше имя", 
+                      required: true %>
                   <span class="help-block"></span>
                 </div>
                 
                 <!-- Message -->
                 <div class="form-group">
                   <label for="message" class="sr-only">Сообщение *</label>
-                  <textarea name="message" class="form-control" id="message" placeholder="Введите сообщение"></textarea>
+                  <%= f.text_area :message, 
+                      class: 'form-control', 
+                      placeholder: "Введите сообщение", 
+                      required: true %>
                   <span class="help-block"></span>
                 </div>
                 
@@ -705,8 +715,8 @@
                 <button type="submit" class="btn btn-primary">
                   Отправить
                 </button>
-
-              </form>
+              <% end %>
+              <!-- </form> -->
 
             </div>
             <div class="col-sm-4">
@@ -777,7 +787,7 @@
       <div class="col-sm-9">
 
         <p class="footer__copyright">
-          <span id="footer__year">2017</span> &copy; Троговый Дом Химик
+          <span id="footer__year">2017</span> &copy; Торговый Дом Химик
         </p>
 
       </div>

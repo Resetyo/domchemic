@@ -54,4 +54,10 @@ RailsAdmin.config do |config|
   config.model 'PromoProduct' do
     label "Продукты на главной"
   end
+  config.model 'Contact' do
+    label "Сообщения"
+  end
+  config.model 'Setting' do
+    label "Настройки"
+  end
 end

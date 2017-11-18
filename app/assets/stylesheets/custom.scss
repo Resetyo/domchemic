@@ -1,3 +1,15 @@
+.flash_notice, .flash_error {
+  padding: 5px 15px;
+  background-color: #FFAB00;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 1031;
+  a {
+    color: white;
+  }
+}
+
 header.catalog {
   position: absolute;
   a:last-child {
@@ -95,6 +107,11 @@ h1 {
 }
 
 @media(max-width: 767px){
+  .flash_notice, .flash_error {
+    position: fixed;
+    bottom: 0;
+  }
+
   header.catalog {
     position: fixed;
     z-index: 2;

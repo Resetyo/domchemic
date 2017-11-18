@@ -11,6 +11,11 @@
   </head>
 
   <body data-spy="scroll" data-target="#navbar_main" data-offset="80">
+    <% flash.each do |key, value| %>
+          <div class="flash_<%= key %>">
+                <%= value.html_safe %>
+          </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
