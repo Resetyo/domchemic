@@ -49,10 +49,10 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    user_name:            'domhimik@gmail.com',
-    password:             'hihi69dom',
+    port:                 25,
+    address:              'smtp.locum.ru',
+    user_name:            'info@domhimik.ru',
+    password:             'b5YkeSe',
     authentication:       :plain,
     enable_starttls_auto: true  }
 
