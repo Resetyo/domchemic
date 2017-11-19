@@ -280,8 +280,8 @@ ru:
         desc: ↓
   views:
     pagination:
-      first: "&laquo; Первая"
-      previous: "&#8249; Пред"
+      first: "&laquo;"
+      previous: "&#8249;"
       truncate: "..."
-      next: "След &#8250;"
-      last: "Последняя &raquo;"
+      next: "&#8250;"
+      last: "&raquo;"

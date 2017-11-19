@@ -13,5 +13,6 @@
   <%= datagrid_form_for @grid, :method => :get, :url => products_path %>
   
   <%= datagrid_table @grid %>
-  <%= paginate(@grid.assets) %>
+  <%= paginate(@grid.assets, :theme => 'twitter-bootstrap-3',
+                              :pagination_class => "pagination-sm") %>
 </div>
