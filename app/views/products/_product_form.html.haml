@@ -1,3 +1,6 @@
+- if model.image.present? 
+  = link_to model.image.url, data: { lightbox: 'product-image' } do
+    = image_tag model.image.thumb.url
 = form_tag new_list, remote: true, class: "product-form" do
   = hidden_field_tag :product_codes, model.code
   = button_tag model.name, class: "product-item", type: "submit"

@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'lightbox2-rails', "2.8.2.1"
+gem 'russian', '~> 0.6.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-kaminari-views'
@@ -27,6 +29,7 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'roo-xls'
 gem 'datagrid', '1.5.4'
 gem 'carrierwave', '1.0.0.rc'
+gem 'rmagick'
 gem 'whenever', :require => false
 
 gem 'unicorn', '5.1.0'

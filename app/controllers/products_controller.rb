@@ -14,8 +14,12 @@ class ProductsController < ApplicationController
       old_files = Dir.glob("#{Rails.root}/public/uploads/products/*")
       old_files.each { |f| File.delete(f) }
 
+      dir_name = Rails.root.join('public', 'uploads', 'products')
+      FileUtils.mkdir_p(dir_name) unless File.directory?(dir_name)
+      
       @filename = DateTime.now.to_s + '.xls'
-      path_to_file = Rails.root.join('public', 'uploads', 'products', @filename)
+      path_to_file = dir_name + @filename
+
       File.open(path_to_file, 'w') do |file|
         file.write(uploaded_io.read.force_encoding("utf-8"))
       end

@@ -3,8 +3,6 @@ module ProcessFile
     path_to_file = Dir.glob("#{Rails.root}/public/uploads/products/*")[0]
     if path_to_file.present?
 
-      sleep 60
-
       xls = Roo::Excel.new(path_to_file)
       csv_text = xls.to_csv
       csv = CSV.parse(csv_text)#, :headers => true)
@@ -18,11 +16,27 @@ module ProcessFile
           name = name.gsub(/\/.+/,'') if name
           code = row[0][/\A\S+\d/]
         end
-        product = Product.create( code: code, 
-                                  name: name[1..-2], 
-                                  full_name: full_name,
-                                  price: row[2].to_f
-                                  ) if name
+        if name
+          product = Product.create( code: code, 
+                                    name: name[1..-2], 
+                                    full_name: full_name,
+                                    price: row[2].to_f
+                                    )
+
+          slug_code = SlugPreparatorRus.slug code, 'no-code'
+          image_folder = "#{Rails.root}/public/uploads/product/image/#{slug_code}"
+
+          if File.directory?(image_folder)
+            image_path = Dir.entries(image_folder).select do |i|
+              i[0..5] != "thumb_" && i.length > 4
+            end
+            image_path = "#{image_folder}/#{image_path[0]}"
+
+            product.image = File.open(image_path) if File.exist?(image_path)
+          end
+
+          product.save
+        end
       end
 
       Product.where("id in (?)", old_products).delete_all

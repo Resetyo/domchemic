@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+
+  mount_uploader :image, ProductUploader
+
   def self.user_list session_id
     Product.where("code in (?)", codes_list(session_id))
   end
