@@ -2,6 +2,7 @@ module ProcessFile
   def self.update
     path_to_file = Dir.glob("#{Rails.root}/public/uploads/products/*")[0]
     if path_to_file.present?
+      puts "#{DateTime.now} file found"
 
       xls = Roo::Excel.new(path_to_file)
       csv_text = xls.to_csv
