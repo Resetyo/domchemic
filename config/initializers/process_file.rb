@@ -2,8 +2,6 @@ module ProcessFile
   def self.update
     path_to_file = Dir.glob("#{Rails.root}/public/uploads/products/*")[0]
     if path_to_file.present?
-      puts "#{DateTime.now} file found"
-
       xls = Roo::Excel.new(path_to_file)
       csv_text = xls.to_csv
       csv = CSV.parse(csv_text)#, :headers => true)
@@ -29,15 +27,14 @@ module ProcessFile
             image_folder = "#{Rails.root}/public/uploads/product/image/#{slug_code}"
 
             if File.directory?(image_folder)
-              image_path = Dir.entries(image_folder).select do |i|
+              image_name = Dir.entries(image_folder).select do |i|
                 i[0..5] != "thumb_" && i.length > 4
               end
-              image_path = "#{image_folder}/#{image_path[0]}"
+              image_path = "#{image_folder}/#{image_name[0]}"
 
-              product.image = File.open(image_path) if File.exist?(image_path)
+              sql = "UPDATE products SET image = '#{image_name[0]}' WHERE id = #{product.id}"
+              ActiveRecord::Base.connection.execute(sql) if File.exist?(image_path)
             end
-
-            product.save
           end
         end
       end
