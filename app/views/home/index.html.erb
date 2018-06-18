@@ -36,7 +36,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a data-turbolinks="false" class="navbar-brand" href="/">Торговый Дом Химик</a>
+      <a data-turbolinks="false" class="navbar-brand" href="/">
+        <%= image_tag 'logo_Dom.jpg', class: 'main-logo' %>
+      </a>
     </div>
 
     <!-- Links -->
@@ -457,13 +459,22 @@
             <small> от 10 000 руб.</small> 3%
           </div>
           <div class="pricing__item__price">
-            <small> от 20 000 руб.</small> 5%
+            <small> от 20 000 руб.</small> 4%
           </div>
           <div class="pricing__item__price">
-            <small> от 45 000 руб.</small> 8%
+            <small> от 30 000 руб.</small> 5%
           </div>
           <div class="pricing__item__price">
-            <small> от 60 000 руб.</small> 10%
+            <small> от 45 000 руб.</small> 6%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 200 000 руб.</small> 7%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 300 000 руб.</small> 8%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 400 000 руб.</small> 9%
           </div>
          </div> <!-- / .pricing__item -->
 
@@ -475,16 +486,25 @@
             Накопительные скидки на текущий месяц<br> по результатам товарооборота<br> за предыдущий месяц или год
           </h3>
           <div class="pricing__item__price">
-            <small> от 30 000 руб.</small> 3%
+            <small> от 20 000 руб.</small> 3%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 40 000 руб.</small> 4%
           </div>
           <div class="pricing__item__price">
             <small> от 60 000 руб.</small> 5%
           </div>
           <div class="pricing__item__price">
-            <small> от 90 000 руб.</small> 8%
+            <small> от 90 000 руб.</small> 6%
           </div>
           <div class="pricing__item__price">
-            <small> от 150 000 руб.</small> 10%
+            <small> от 250 000 руб.</small> 7%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 350 000 руб.</small> 8%
+          </div>
+          <div class="pricing__item__price">
+            <small> от 450 000 руб.</small> 9%
           </div>
         </div> <!-- / .pricing__item -->
 
@@ -513,7 +533,7 @@
     <div class="row">
       <div class="col-sm-4">
         
-        <a href="#" class="news__item animate-sm-step-0" data-animate="animate-up">
+        <a class="news__item animate-sm-step-0" data-animate="animate-up">
           <div class="news__item__img">
             <img src="assets1/img/krs.jpg" class="img-responsive" alt="...">
             <time datetime="2017-01-12" class="news__item__img__date">
@@ -533,7 +553,7 @@
       </div>
       <div class="col-sm-4">
         
-        <a href="#" class="news__item animate-sm-step-1" data-animate="animate-up">
+        <a class="news__item animate-sm-step-1" data-animate="animate-up">
           <div class="news__item__img">
             <img src="assets1/img/div.jpg" class="img-responsive" alt="...">
             <time datetime="2017-02-17" class="news__item__img__date">
@@ -553,7 +573,7 @@
       </div>
       <div class="col-sm-4">
         
-        <a href="#" class="news__item animate-sm-step-2" data-animate="animate-up">
+        <a class="news__item animate-sm-step-2" data-animate="animate-up">
           <div class="news__item__img">
             <img src="assets1/img/truck.jpg" class="img-responsive" alt="...">
             <time datetime="2017-02-25" class="news__item__img__date">
@@ -797,7 +817,7 @@
       <div class="col-sm-3">
         
         <ul class="footer__social">
-          <% if current_user %>
+          <% if current_user && current_user.has_role?(:admin) %>
             <li>
               <%= link_to "/admin" do %>
                 <i class="ion-android-person"></i>

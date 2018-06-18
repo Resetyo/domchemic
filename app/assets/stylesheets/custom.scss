@@ -1,3 +1,11 @@
+.navbar-brand {
+  padding: 0 !important;
+}
+
+.main-logo {
+  width: 153px;
+}
+
 .flash_notice, .flash_error {
   padding: 5px 15px;
   background-color: #FFAB00;
@@ -168,4 +176,8 @@ h1 {
       }
     }
   }
+}
+
+.field {
+  margin-bottom: 20px;
 }
