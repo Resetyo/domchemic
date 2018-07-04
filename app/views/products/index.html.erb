@@ -1,11 +1,5 @@
-<header class="catalog">
-  <a href="/" data-turbolinks="false" class="btn btn-primary">Торговый Дом Химик</a>
-  <a href="/lists" data-turbolinks="false" class="btn btn-primary">
-    К списку
-    <% hidden = "hidden-only" if @codes_list.blank? %>
-    <span class="products-count <%= hidden %>"><%= @codes_list.count if @codes_list %></span>
-  </a>
-</header>
+<%= render 'layouts/products_header' %>
+
 <h1>Каталог продукции</h1>
 <p class="text-center">Минимальный чек в магазине 3000 руб.</p>
 <p class="text-center"><%= link_to "Скачать прайс в Excel", products_path(format: 'xls') %></p>

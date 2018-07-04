@@ -1,12 +1,16 @@
-<header class="catalog">
-  <a href="/" data-turbolinks="false" class="btn btn-primary">Торговый Дом Химик</a>
-  <a href="/products" data-turbolinks="false" class="btn btn-primary">Каталог</a>
-</header>
-<h1>Список отобранных товаров</h1>
-<p class="text-center"><%= link_to "Скачать список в Excel", lists_path(format: 'xls') %></p>
+<%= render 'layouts/products_header' %>
 
-<div class="table-wrapper table-list" data-amount="<%= @amount %>">
-  <%= datagrid_table @grid %>
-  <%= paginate(@grid.assets, :theme => 'twitter-bootstrap-3',
-                              :pagination_class => "pagination-sm") %>
+<div class="container text-center">
+  <ul>
+    <% for list in @lists %>
+      <li>
+        <%= link_to list.title, list_path(slug: list.session_id) %>
+        <%= link_to "удалить", list_path(slug: list.session_id), 
+          method: :delete, data: { confirm: "Вы уверены?" },
+          style: "margin-left: 30px; color: gray;" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Начать новый список", new_list_path %>
 </div>

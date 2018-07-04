@@ -4,8 +4,16 @@ class ProductsController < ApplicationController
       scope.page(params[:page]).per(50)
     end
     @new_list = List.new
-    @codes_list = Product.codes_list(cookies[:session_id])
-    @session_id = cookies[:session_id]
+
+    if current_user
+      @session_id = current_user.current_session_id
+    else
+      @session_id = cookies[:session_id]
+    end
+
+    list = List.find_by(session_id: @session_id)
+    @codes_list = list.codes_list if list
+    @lists = current_user.lists if current_user
     @products = Product.all
   end
 

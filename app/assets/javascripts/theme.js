@@ -115,17 +115,19 @@ $(function() {
 
     // Disable carousel when not in viewport
 
-    bannerCarousel.waypoint(function(direction) {
-      if ( direction == "down") {
-        bannerCarousel.carousel('pause');
-      } else {
-        bannerCarousel.carousel('cycle');
-      }
-    }, {
-      offset: function() {
-        return -bannerCarousel.outerHeight();
-      }
-    });
+    if (bannerCarousel.length > 0) {
+        bannerCarousel.waypoint(function(direction) {
+          if ( direction == "down") {
+            bannerCarousel.carousel('pause');
+          } else {
+            bannerCarousel.carousel('cycle');
+          }
+        }, {
+          offset: function() {
+            return -bannerCarousel.outerHeight();
+          }
+        });
+    }
 
 
     // Banner: Parallax

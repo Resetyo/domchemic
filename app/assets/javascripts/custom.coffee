@@ -8,3 +8,6 @@ $ ->
     amount = table_list_div.data('amount')
     amount_tds.last().text(amount + " р.")
     tr.after(amount_tr)
+
+  $('.flash_notice').click ->
+    $(this).slideUp('fast')

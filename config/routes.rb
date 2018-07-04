@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   
-  resources :lists
+  resources :lists, param: :slug
   resources :products
   resources :contacts
   match '/upload', to: 'products#upload', via: :post

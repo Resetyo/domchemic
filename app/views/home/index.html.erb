@@ -57,6 +57,27 @@
         <!-- <li><a href="#section_about">About</a></li> -->
         <li><a href="#section_testimonials">Отзывы</a></li>
         <li><a href="#section_contact">Контакты</a></li>
+        <% if current_user %>
+          <li class="dropdown">
+            <a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.email.split('@')[0] %>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li class="text-center">
+                  <%= link_to "Мои списки", lists_path %>
+              </li>
+
+              <li role="separator" class="divider"></li>
+
+              <li class="text-center">
+                  <%= link_to "Выход", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Вход", new_user_session_path %></li>
+        <% end %>
       </ul>
 
     </div><!-- /.navbar-collapse -->

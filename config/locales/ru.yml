@@ -265,10 +265,6 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
-  devise:
-    sessions:
-      user:
-        signed_in: "Вы вошли в Панель управления сайтом"
   datagrid:
     no_results: "Нет результатов"
     form:
