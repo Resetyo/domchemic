@@ -21,7 +21,7 @@ gem 'russian', '~> 0.6.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-kaminari-views'
 gem 'font-awesome-sass',  '~> 4.3'
-gem 'devise'
+gem 'devise', '~> 4.6.0'
 gem 'cancancan', '~> 1.10'
 gem "rolify"
 gem 'rails_admin', '~> 1.2'
